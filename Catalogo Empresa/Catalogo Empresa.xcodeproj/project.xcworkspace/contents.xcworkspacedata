@@ -2,15 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Catalogo Empresa/Empresa.h">
-   </FileRef>
-   <FileRef
-      location = "group:../Catalogo Empresa/Empresa.m">
-   </FileRef>
-   <FileRef
-      location = "group:../Catalogo Empresa">
-   </FileRef>
-   <FileRef
       location = "self:Catalogo Empresa.xcodeproj">
    </FileRef>
 </Workspace>
