@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.avisoSucessoLabel.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -40,8 +41,27 @@
     
     Empresa *e = [[Empresa alloc] init];
     e.nome = self.nomeField.text;
+  
+    //liberar teclado
+    [self.nomeField resignFirstResponder];
+    
     e.quantidadeFuncionarios = [self.quantidadeField.text intValue];
     NSLog(@"Empresa criada. Nome=%@, funcionários=%d",
           e.nome, e.quantidadeFuncionarios);
+   
+    //inserindo animacao do label avisosSucesso
+    self.avisoSucessoLabel.alpha = 0;
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.avisoSucessoLabel.hidden = NO;
+        self.avisoSucessoLabel.alpha = 1;
+    }completion:^(BOOL finalizado) {
+        [UIView animateWithDuration:1 delay:1 options:0 animations:^{
+            self.avisoSucessoLabel.alpha=0;
+        } completion:^(BOOL finalizado) {
+            self.avisoSucessoLabel.hidden = YES;
+        }];
+    }];
+    
 }
 @end
