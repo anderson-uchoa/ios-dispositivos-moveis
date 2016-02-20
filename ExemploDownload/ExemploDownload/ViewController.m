@@ -8,10 +8,10 @@
 @implementation ViewController
 
 -(NSString *) downloadSavePathFor:(NSString *) filename {
-    NSArray *paths =
-    NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                        NSUserDomainMask, YES);
+  
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPath = [paths objectAtIndex:0];
+    
     return [documentsPath stringByAppendingPathComponent:filename];
 }
 
@@ -28,13 +28,12 @@
 -(IBAction)startDownload:(id)sender {
     NSURL *url = [NSURL URLWithString:_downloadField.text];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSString *saveFilename =
-    [self downloadSavePathFor:url.lastPathComponent];
+  
+    NSString *saveFilename = [self downloadSavePathFor:url.lastPathComponent];
     
     NSLog(@"Salvando o arquivo em %@", saveFilename);
     
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]
-                                         initWithRequest:request];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     
     operation.outputStream = [NSOutputStream
                               outputStreamToFileAtPath:saveFilename append:NO];
