@@ -422,6 +422,7 @@
 				3EA299EA1C7696EB0036790B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EA299EB1C7696EB0036790B /* Build configuration list for PBXNativeTarget "Catalogo EmpresaTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +431,7 @@
 				3EA299ED1C7696EB0036790B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
