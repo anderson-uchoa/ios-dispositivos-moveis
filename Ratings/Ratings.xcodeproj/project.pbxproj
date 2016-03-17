@@ -16,6 +16,9 @@
 		3E8EC1C51C7B776100B8A38D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EC1C41C7B776100B8A38D /* Player.swift */; };
 		3E8EC1C71C7B780900B8A38D /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EC1C61C7B780900B8A38D /* SampleData.swift */; };
 		3E8EC1C91C7B7D5F00B8A38D /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EC1C81C7B7D5F00B8A38D /* PlayersViewController.swift */; };
+		3E8EC1CB1C7BA6A700B8A38D /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EC1CA1C7BA6A700B8A38D /* PlayerCell.swift */; };
+		3E8EC1CD1C7BB2B100B8A38D /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EC1CC1C7BB2B100B8A38D /* PlayerDetailsViewController.swift */; };
+		3EAC346C1C7CA4DC00E26FB5 /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC346B1C7CA4DC00E26FB5 /* GamePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		3E8EC1C41C7B776100B8A38D /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		3E8EC1C61C7B780900B8A38D /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		3E8EC1C81C7B7D5F00B8A38D /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		3E8EC1CA1C7BA6A700B8A38D /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		3E8EC1CC1C7BB2B100B8A38D /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		3EAC346B1C7CA4DC00E26FB5 /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 		3E8EC1721C7B722400B8A38D /* Ratings */ = {
 			isa = PBXGroup;
 			children = (
+				3EAC346B1C7CA4DC00E26FB5 /* GamePickerViewController.swift */,
+				3E8EC1CC1C7BB2B100B8A38D /* PlayerDetailsViewController.swift */,
+				3E8EC1CA1C7BA6A700B8A38D /* PlayerCell.swift */,
 				3E8EC1C81C7B7D5F00B8A38D /* PlayersViewController.swift */,
 				3E8EC1C41C7B776100B8A38D /* Player.swift */,
 				3E8EC1C61C7B780900B8A38D /* SampleData.swift */,
@@ -221,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EAC346C1C7CA4DC00E26FB5 /* GamePickerViewController.swift in Sources */,
+				3E8EC1CB1C7BA6A700B8A38D /* PlayerCell.swift in Sources */,
 				3E8EC1C51C7B776100B8A38D /* Player.swift in Sources */,
 				3E8EC1781C7B722400B8A38D /* ViewController.swift in Sources */,
+				3E8EC1CD1C7BB2B100B8A38D /* PlayerDetailsViewController.swift in Sources */,
 				3E8EC1761C7B722400B8A38D /* AppDelegate.swift in Sources */,
 				3E8EC1C91C7B7D5F00B8A38D /* PlayersViewController.swift in Sources */,
 				3E8EC1C71C7B780900B8A38D /* SampleData.swift in Sources */,
@@ -421,6 +433,7 @@
 				3E8EC1911C7B722500B8A38D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E8EC1921C7B722500B8A38D /* Build configuration list for PBXNativeTarget "RatingsTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +442,7 @@
 				3E8EC1941C7B722500B8A38D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

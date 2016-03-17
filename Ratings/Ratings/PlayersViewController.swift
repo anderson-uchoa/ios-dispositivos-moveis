@@ -11,6 +11,8 @@ import UIKit
 class PlayersViewController: UITableViewController {
     
     var players:[Player] = playersData
+  
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +29,23 @@ class PlayersViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func imageForRating(rating:Int) -> UIImage? {
-        let imageName = "\(rating)Stars"
-        return UIImage(named: imageName)
-    }
+  
     
+    @IBAction func savePlayerDetail(segue:UIStoryboardSegue) {
+
+        if let playerDetailsViewController = segue.sourceViewController as? PlayerDetailsViewController {
+            
+            //add the new player to the players array
+            if let player = playerDetailsViewController.player {
+                players.append(player)
+                
+                //update the tableView
+                let indexPath = NSIndexPath(forRow: players.count-1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
+    }
+
     
     // MARK: - Table view data source
 
@@ -49,19 +63,10 @@ class PlayersViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell", forIndexPath: indexPath) as! PlayerCell
 
         let player = players[indexPath.row] as Player //2
-        
-        if let nameLabel = cell.viewWithTag(100) as? UILabel { //3
-            nameLabel.text = player.name
-        }
-        if let gameLabel = cell.viewWithTag(101) as? UILabel {
-            gameLabel.text = player.game
-        }
-        if let ratingImageView = cell.viewWithTag(102) as? UIImageView {
-            ratingImageView.image = self.imageForRating(player.rating)
-        }
+         cell.player = player
         return cell
     }
 
